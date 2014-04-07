@@ -1,0 +1,662 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{22045F88-980B-41ED-BD3A-76DE84988134}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>WindowsApplication1.My.MyApplication</StartupObject>
+    <RootNamespace>WindowsApplication1</RootNamespace>
+    <AssemblyName>NewWorldClient</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>50</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>NewWorldClient.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>NewWorldClient.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>4DCB1BE9008A831C31CCB3A7D00106799839A2E3</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>NewWorldClient_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>NewWorldClient.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>NewWorldClient.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin.Designer.vb">
+      <DependentUpon>Admin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassHistoryForm.Designer.vb">
+      <DependentUpon>ClassHistoryForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ClassHistoryForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminNewUser.Designer.vb">
+      <DependentUpon>AdminNewUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminNewUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassLookupForm.Designer.vb">
+      <DependentUpon>ClassLookupForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ClassLookupForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InfoForm.Designer.vb">
+      <DependentUpon>InfoForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="InfoForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginSetPassword.Designer.vb">
+      <DependentUpon>LoginSetPassword.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LoginSetPassword.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MemPurchaseForm.Designer.vb">
+      <DependentUpon>MemPurchaseForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MemPurchaseForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PurSearchFilterform.Designer.vb">
+      <DependentUpon>PurSearchFilterform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PurSearchFilterform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportConfigMenuForm.Designer.vb">
+      <DependentUpon>ReportConfigMenuForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportConfigMenuForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportConfigProdForm.Designer.vb">
+      <DependentUpon>ReportConfigProdForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportConfigProdForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportMenuAddMenuForm.Designer.vb">
+      <DependentUpon>ReportMenuAddMenuForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportMenuAddMenuForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportProdAddProductForm.Designer.vb">
+      <DependentUpon>ReportProdAddProductForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportProdAddProductForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WhAddNewProdForm.Designer.vb">
+      <DependentUpon>WhAddNewProdForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="WhAddNewProdForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WhAddProdForm.Designer.vb">
+      <DependentUpon>WhAddProdForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="WhAddProdForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WhAddressHistory.Designer.vb">
+      <DependentUpon>WhAddressHistory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="WhAddressHistory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WhForm.Designer.vb">
+      <DependentUpon>WhForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="WhForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MemSearchFilterForm.Designer.vb">
+      <DependentUpon>MemSearchFilterForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MemSearchFilterForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PurchaseHistoryForm.Designer.vb">
+      <DependentUpon>PurchaseHistoryForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PurchaseHistoryForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProdLookupform.Designer.vb">
+      <DependentUpon>ProdLookupform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ProdLookupform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common.vb" />
+    <Compile Include="AddRefFilterForm.Designer.vb">
+      <DependentUpon>AddRefFilterForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AddRefFilterForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MemSearchForm.Designer.vb">
+      <DependentUpon>MemSearchForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MemSearchForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddRefForm.Designer.vb">
+      <DependentUpon>AddRefForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AddRefForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewMemForm.Designer.vb">
+      <DependentUpon>NewMemForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NewMemForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuSearchForm.Designer.vb">
+      <DependentUpon>MenuSearchForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MenuSearchForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewMenuAddProdForm.Designer.vb">
+      <DependentUpon>NewMenuAddProdForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NewMenuAddProdForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewMenuForm.Designer.vb">
+      <DependentUpon>NewMenuForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NewMenuForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewProdForm.Designer.vb">
+      <DependentUpon>NewProdForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NewProdForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProdSearchForm.Designer.vb">
+      <DependentUpon>ProdSearchForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ProdSearchForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportAddMenuForm.Designer.vb">
+      <DependentUpon>ReportAddMenuForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportAddMenuForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportAddProductForm.Designer.vb">
+      <DependentUpon>ReportAddProductForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportAddProductForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportConfigForm.Designer.vb">
+      <DependentUpon>ReportConfigForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportConfigForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForm.Designer.vb">
+      <DependentUpon>ReportForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsrForm.Designer.vb">
+      <DependentUpon>UsrForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UsrForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.vb">
+      <DependentUpon>LoginForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="NewWorldDBDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NewWorldDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="WhHistoryView.Designer.vb">
+      <DependentUpon>WhHistoryView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="WhHistoryView.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WhSummary.Designer.vb">
+      <DependentUpon>WhSummary.vb</DependentUpon>
+    </Compile>
+    <Compile Include="WhSummary.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WhViewForm.Designer.vb">
+      <DependentUpon>WhViewForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="WhViewForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WhQuerySearch.Designer.vb">
+      <DependentUpon>WhQuerySearch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="WhQuerySearch.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Admin.resx">
+      <DependentUpon>Admin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassHistoryForm.resx">
+      <DependentUpon>ClassHistoryForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminNewUser.resx">
+      <DependentUpon>AdminNewUser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassLookupForm.resx">
+      <DependentUpon>ClassLookupForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfoForm.resx">
+      <DependentUpon>InfoForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginSetPassword.resx">
+      <DependentUpon>LoginSetPassword.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemPurchaseForm.resx">
+      <DependentUpon>MemPurchaseForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PurSearchFilterform.resx">
+      <DependentUpon>PurSearchFilterform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportConfigMenuForm.resx">
+      <DependentUpon>ReportConfigMenuForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportConfigProdForm.resx">
+      <DependentUpon>ReportConfigProdForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportMenuAddMenuForm.resx">
+      <DependentUpon>ReportMenuAddMenuForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportProdAddProductForm.resx">
+      <DependentUpon>ReportProdAddProductForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WhAddNewProdForm.resx">
+      <DependentUpon>WhAddNewProdForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WhAddProdForm.resx">
+      <DependentUpon>WhAddProdForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WhAddressHistory.resx">
+      <DependentUpon>WhAddressHistory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WhForm.resx">
+      <DependentUpon>WhForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemSearchFilterForm.resx">
+      <DependentUpon>MemSearchFilterForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PurchaseHistoryForm.resx">
+      <DependentUpon>PurchaseHistoryForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProdLookupform.resx">
+      <DependentUpon>ProdLookupform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddRefFilterForm.resx">
+      <DependentUpon>AddRefFilterForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemSearchForm.resx">
+      <DependentUpon>MemSearchForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddRefForm.resx">
+      <DependentUpon>AddRefForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewMemForm.resx">
+      <DependentUpon>NewMemForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuSearchForm.resx">
+      <DependentUpon>MenuSearchForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewMenuAddProdForm.resx">
+      <DependentUpon>NewMenuAddProdForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewMenuForm.resx">
+      <DependentUpon>NewMenuForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewProdForm.resx">
+      <DependentUpon>NewProdForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProdSearchForm.resx">
+      <DependentUpon>ProdSearchForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportAddMenuForm.resx">
+      <DependentUpon>ReportAddMenuForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportAddProductForm.resx">
+      <DependentUpon>ReportAddProductForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportConfigForm.resx">
+      <DependentUpon>ReportConfigForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm.resx">
+      <DependentUpon>ReportForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsrForm.resx">
+      <DependentUpon>UsrForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WhHistoryView.resx">
+      <DependentUpon>WhHistoryView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WhSummary.resx">
+      <DependentUpon>WhSummary.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WhViewForm.resx">
+      <DependentUpon>WhViewForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WhQuerySearch.resx">
+      <DependentUpon>WhQuerySearch.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="NewWorldClient_TemporaryKey.pfx" />
+    <None Include="NewWorldDBDataSet.xsc">
+      <DependentUpon>NewWorldDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="NewWorldDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NewWorldDBDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NewWorldDBDataSet.xss">
+      <DependentUpon>NewWorldDBDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Word">
+      <Guid>{00020905-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clear-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Small-add-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\small-delete-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\small-open-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\small-Filter-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\small-Close-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Generate-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\small-addRound-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon.ico" />
+    <None Include="Resources\Actions-edit-clear-icon.png" />
+    <None Include="Resources\Lock-icon.png" />
+    <None Include="Resources\folder-full-accept-icon.png" />
+    <None Include="Resources\folder-accept-icon.png" />
+    <None Include="Resources\Accept-icon.png" />
+    <None Include="Resources\Delete-icon.png" />
+    <None Include="Resources\note-accept-icon.png" />
+    <None Include="Resources\accept-database-icon.png" />
+    <None Include="Resources\SEO-icon.png" />
+    <None Include="Resources\Actions-document-edit-icon.png" />
+    <None Include="Resources\Trash-icon.png" />
+    <None Include="Resources\App-restart-icon.png" />
+    <None Include="Resources\Actions-bookmark-add-icon.png" />
+    <None Include="Resources\check-icon.png" />
+    <None Include="Resources\refresh-icon.png" />
+    <None Include="Resources\Open-icon.png" />
+    <None Include="Resources\Document-search-icon.png" />
+    <None Include="Resources\address-book-icon.png" />
+    <None Include="Resources\basket-icon.png" />
+    <None Include="Resources\basket-add-icon.png" />
+    <None Include="Resources\basket-remove-icon.png" />
+    <None Include="Resources\save2-icon.png" />
+    <None Include="Resources\NewWorldLogo.jpg" />
+    <None Include="Resources\Smaller-add-icon.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
