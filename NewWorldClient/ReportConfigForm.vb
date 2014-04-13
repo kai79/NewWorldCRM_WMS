@@ -274,16 +274,18 @@
                 sqlSelect = sqlSelect.Replace("Mem.MemID", "DISTINCT Mem.MemID")
             End If
 
-            sqlSelect = sqlSelect & " '$' + CONVERT(VARCHAR, TotSpd.AmountSum, 0) AS 'Total Spend',"
+            'sqlSelect = sqlSelect & " '$' + CONVERT(VARCHAR, TotSpd.AmountSum, 0) AS 'Total Spend',"
+            sqlSelect = sqlSelect & " TotSpd.AmountSum AS 'Total Spend',"
 
             If InStr(sqlFrom, "AS TotSpd,") = 0 Then
-                sqlFrom = sqlFrom & " (SELECT Mem.MemID as SpdMemID, SUM(Pur.PurAmt) As 'AmountSum' FROM MemTbl AS Mem, PurTbl AS Pur WHERE Mem.MemID = Pur.PurMemID GROUP BY Mem.MemID) AS TotSpd,"
+                'sqlFrom = sqlFrom & " (SELECT Mem.MemID as SpdMemID, SUM(Pur.PurAmt) As 'AmountSum' FROM MemTbl AS Mem, PurTbl AS Pur WHERE Mem.MemID = Pur.PurMemID GROUP BY Mem.MemID) AS TotSpd,"
+                sqlFrom = sqlFrom & " (SELECT Mem.MemID as SpdMemID, case when SUM(Pur.PurAmt) is NULL then '0' Else SUM(Pur.PurAmt) end As 'AmountSum' FROM MemTbl AS Mem left outer join PurTbl as Pur on Mem.MemID = Pur.PurMemID GROUP BY Mem.MemID) as TotSpd,"
             End If
 
             sqlWhere = sqlWhere & " (Mem.MemID=TotSpd.SpdMemID) AND"
 
-            boolSpdTotUnion = True
-            sqlSpdTotUnionSwap = "(SELECT Mem.MemID as SpdMemID, SUM(Pur.PurAmt) As 'AmountSum' FROM MemTbl AS Mem, PurTbl AS Pur WHERE Mem.MemID = Pur.PurMemID GROUP BY Mem.MemID) AS TotSpd|(SELECT Mem.MemID as SpdMemID, 'AmountSum'=0 FROM MemTbl AS Mem, PurTbl AS Pur WHERE Mem.MemID NOT IN (SELECT DISTINCT PurMemID FROM PurTbl)) AS TotSpd"
+            'boolSpdTotUnion = True
+            'sqlSpdTotUnionSwap = "(SELECT Mem.MemID as SpdMemID, SUM(Pur.PurAmt) As 'AmountSum' FROM MemTbl AS Mem, PurTbl AS Pur WHERE Mem.MemID = Pur.PurMemID GROUP BY Mem.MemID) AS TotSpd|(SELECT Mem.MemID as SpdMemID, 'AmountSum'=0 FROM MemTbl AS Mem, PurTbl AS Pur WHERE Mem.MemID NOT IN (SELECT DISTINCT PurMemID FROM PurTbl)) AS TotSpd"
 
             If InStr(sqlOrder, "Mem.MemID") = 0 Then
                 sqlOrder = sqlOrder & " Mem.MemID,"
@@ -418,6 +420,19 @@
             End If
 
         End If
+
+        If CfgOrderNoChkBox.Checked = True And boolRptError = False And CfgProdNameComboBox.SelectedIndex = 0 And CfgProdNameChkBox.Checked = True Then
+
+            If ProdShowInfoChkBox.Checked = True Then
+                sqlSelect = sqlSelect & " Pur.PurOrderNo AS 'Order No',"
+
+                If InStr(sqlFrom, "AS Pur,") = 0 Then
+                    sqlFrom = sqlFrom & " PurTbl AS Pur,"
+                End If
+            End If
+
+        End If
+
 
         If CfgMenuNameChkBox.Checked = True And boolRptError = False Then
 
@@ -566,6 +581,12 @@
                 Dim ReportForm As New ReportForm
                 ReportForm.ReportDataGridView.DataSource = myTable
                 ReportForm.ReportDataGridView.AlternatingRowsDefaultCellStyle.BackColor = Color.LightGray
+                ReportForm.ReportToolStripStatusLabel.Text = "Count: " & ReportForm.ReportDataGridView.RowCount
+
+                If CfgTotSpdChkBox.Checked = True Then
+                    ReportForm.ReportDataGridView.Columns("Total Spend").DefaultCellStyle.Format = "c"
+                End If
+
                 ReportForm.Show()
 
             Catch ex As Exception

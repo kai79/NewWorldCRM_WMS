@@ -4,10 +4,10 @@
     'Public strConnectionString = "Data Source=SERVER\SQLNEWWORLD;Initial Catalog=NewWorldDB;Persist Security Info=True;User ID=sa;Password=Password0"
 
     'VM DB
-    'Public strConnectionString = "Data Source=LIPKAI-8817DDB2\SQLEXPRESS;Initial Catalog=NewWorldDB;Integrated Security=False;Persist Security Info=True;User ID=sa;Password=d3y8mjxy;Encrypt=False"
+    Public strConnectionString = "Data Source=LIPKAI-8817DDB2\SQLEXPRESS;Initial Catalog=NewWorldDB;Integrated Security=False;Persist Security Info=True;User ID=sa;Password=d3y8mjxy;Encrypt=False"
 
     'Laptop
-    Public strConnectionString = "Data Source=LIPKAI-LAPTOP\SQLEXPRESSLAPTOP;Initial Catalog=NewWorldDB;Persist Security Info=True;User ID=sa;Password=d3y8mjxy"
+    'Public strConnectionString = "Data Source=LIPKAI-LAPTOP\SQLEXPRESSLAPTOP;Initial Catalog=NewWorldDB;Persist Security Info=True;User ID=sa;Password=d3y8mjxy"
 
     'Warehouse DB
     'Public strConnectionString = "Data Source=NEWWORLDWH-PC\NEWWORLDWHSQL;Initial Catalog=NewWorldDB;Integrated Security=False;Persist Security Info=True;User ID=sa;Password=Password0"

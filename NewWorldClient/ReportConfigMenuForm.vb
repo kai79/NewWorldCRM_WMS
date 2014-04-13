@@ -33,8 +33,10 @@
 
         If CfgNameChkBox.Checked = True And boolMenuRptError = False Then
 
+            sqlSelect = sqlSelect & " Menu.MenuName AS 'Menu Name',"
+
             If CfgMenuNameComboBox.Text = "All" Then
-                sqlSelect = sqlSelect & " Menu.MenuName AS 'Menu Name',"
+
             Else
 
                 If strMenuRptSelectedMenu = "" Then
@@ -182,6 +184,7 @@
                 Dim ReportForm As New ReportForm
                 ReportForm.ReportDataGridView.DataSource = myTable
                 ReportForm.ReportDataGridView.AlternatingRowsDefaultCellStyle.BackColor = Color.LightGray
+                ReportForm.ReportToolStripStatusLabel.Text = "Count: " & ReportForm.ReportDataGridView.RowCount
                 ReportForm.ShowDialog()
 
                 'LoadQuery = True

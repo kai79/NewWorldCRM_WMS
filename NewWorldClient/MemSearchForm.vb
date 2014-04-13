@@ -142,7 +142,7 @@
                         NewMemForm.PurchaseHistoryDataGridView.DataSource = GetTableData(intMemID, "PurMemID", "PurTbl")
                         NewMemForm.ClassHistoryDataGridView.DataSource = GetTableData(intMemID, "ClsMemId", "ClsTbl")
 
-                        NewMemForm.MemNameTextBox.Enabled = False
+                        'NewMemForm.MemNameTextBox.Enabled = False
                         NewMemForm.NewMemClrBtn.Enabled = False
                         'NewMemForm.MemNRICTextBox.Enabled = False
                         NewMemForm.MemJoinDatePicker.Enabled = False

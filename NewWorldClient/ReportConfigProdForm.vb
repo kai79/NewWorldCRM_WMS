@@ -57,8 +57,9 @@
 
         If Me.CfgNameChkBox.Checked = True And boolRptError = False Then
 
+            sqlSelect = sqlSelect & " Prod.ProdName AS 'Product Name',"
+
             If Me.CfgNameComboBox.Text = "All" Then
-                sqlSelect = sqlSelect & " Prod.ProdName AS 'Product Name',"
 
             Else
                 If strProdRptSelectedProd = "" Then
@@ -276,6 +277,7 @@
                 Dim ReportForm As New ReportForm
                 ReportForm.ReportDataGridView.DataSource = myTable
                 ReportForm.ReportDataGridView.AlternatingRowsDefaultCellStyle.BackColor = Color.LightGray
+                ReportForm.ReportToolStripStatusLabel.Text = "Count: " & ReportForm.ReportDataGridView.RowCount
                 ReportForm.ShowDialog()
 
                 'LoadQuery = True

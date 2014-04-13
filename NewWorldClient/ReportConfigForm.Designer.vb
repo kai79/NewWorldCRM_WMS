@@ -88,6 +88,7 @@ Partial Class ReportConfigForm
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.CfgOrderNoChkBox = New System.Windows.Forms.CheckBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -257,7 +258,7 @@ Partial Class ReportConfigForm
         Me.CfgProdNameComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CfgProdNameComboBox.FormattingEnabled = True
         Me.CfgProdNameComboBox.Items.AddRange(New Object() {"Who Have Purchased", "Who Have NOT Purchase"})
-        Me.CfgProdNameComboBox.Location = New System.Drawing.Point(151, 35)
+        Me.CfgProdNameComboBox.Location = New System.Drawing.Point(151, 26)
         Me.CfgProdNameComboBox.Name = "CfgProdNameComboBox"
         Me.CfgProdNameComboBox.Size = New System.Drawing.Size(162, 21)
         Me.CfgProdNameComboBox.TabIndex = 21
@@ -277,7 +278,7 @@ Partial Class ReportConfigForm
         '
         Me.CfgPurDateToLabel.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.CfgPurDateToLabel.AutoSize = True
-        Me.CfgPurDateToLabel.Location = New System.Drawing.Point(468, 88)
+        Me.CfgPurDateToLabel.Location = New System.Drawing.Point(468, 79)
         Me.CfgPurDateToLabel.Name = "CfgPurDateToLabel"
         Me.CfgPurDateToLabel.Size = New System.Drawing.Size(20, 13)
         Me.CfgPurDateToLabel.TabIndex = 36
@@ -287,7 +288,7 @@ Partial Class ReportConfigForm
         '
         Me.CfgPurDateFromLabel.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.CfgPurDateFromLabel.AutoSize = True
-        Me.CfgPurDateFromLabel.Location = New System.Drawing.Point(291, 88)
+        Me.CfgPurDateFromLabel.Location = New System.Drawing.Point(291, 79)
         Me.CfgPurDateFromLabel.Name = "CfgPurDateFromLabel"
         Me.CfgPurDateFromLabel.Size = New System.Drawing.Size(65, 13)
         Me.CfgPurDateFromLabel.TabIndex = 35
@@ -299,7 +300,7 @@ Partial Class ReportConfigForm
         Me.CfgPurDateComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CfgPurDateComboBox.FormattingEnabled = True
         Me.CfgPurDateComboBox.Items.AddRange(New Object() {"Have Purchased", "Have Not Purchased"})
-        Me.CfgPurDateComboBox.Location = New System.Drawing.Point(153, 85)
+        Me.CfgPurDateComboBox.Location = New System.Drawing.Point(151, 76)
         Me.CfgPurDateComboBox.Name = "CfgPurDateComboBox"
         Me.CfgPurDateComboBox.Size = New System.Drawing.Size(128, 21)
         Me.CfgPurDateComboBox.TabIndex = 39
@@ -458,7 +459,7 @@ Partial Class ReportConfigForm
         'CfgFindProdBtn
         '
         Me.CfgFindProdBtn.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.CfgFindProdBtn.Location = New System.Drawing.Point(319, 33)
+        Me.CfgFindProdBtn.Location = New System.Drawing.Point(319, 24)
         Me.CfgFindProdBtn.Name = "CfgFindProdBtn"
         Me.CfgFindProdBtn.Size = New System.Drawing.Size(98, 23)
         Me.CfgFindProdBtn.TabIndex = 58
@@ -490,7 +491,7 @@ Partial Class ReportConfigForm
         '
         Me.CfgPurDateRangeChkBox.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.CfgPurDateRangeChkBox.AutoSize = True
-        Me.CfgPurDateRangeChkBox.Location = New System.Drawing.Point(152, 62)
+        Me.CfgPurDateRangeChkBox.Location = New System.Drawing.Point(151, 53)
         Me.CfgPurDateRangeChkBox.Name = "CfgPurDateRangeChkBox"
         Me.CfgPurDateRangeChkBox.Size = New System.Drawing.Size(141, 17)
         Me.CfgPurDateRangeChkBox.TabIndex = 61
@@ -538,7 +539,7 @@ Partial Class ReportConfigForm
         '
         Me.CfgPurDateFromDatePick.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.CfgPurDateFromDatePick.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.CfgPurDateFromDatePick.Location = New System.Drawing.Point(362, 85)
+        Me.CfgPurDateFromDatePick.Location = New System.Drawing.Point(362, 76)
         Me.CfgPurDateFromDatePick.Name = "CfgPurDateFromDatePick"
         Me.CfgPurDateFromDatePick.Size = New System.Drawing.Size(98, 20)
         Me.CfgPurDateFromDatePick.TabIndex = 73
@@ -547,7 +548,7 @@ Partial Class ReportConfigForm
         '
         Me.CfgPurDateToDatePick.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.CfgPurDateToDatePick.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.CfgPurDateToDatePick.Location = New System.Drawing.Point(494, 85)
+        Me.CfgPurDateToDatePick.Location = New System.Drawing.Point(494, 76)
         Me.CfgPurDateToDatePick.Name = "CfgPurDateToDatePick"
         Me.CfgPurDateToDatePick.Size = New System.Drawing.Size(98, 20)
         Me.CfgPurDateToDatePick.TabIndex = 74
@@ -696,7 +697,7 @@ Partial Class ReportConfigForm
         Me.CfgDevStatComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CfgDevStatComboBox.FormattingEnabled = True
         Me.CfgDevStatComboBox.Items.AddRange(New Object() {"Show All", "Show Only Delivered", "Show Only Non-Delivered"})
-        Me.CfgDevStatComboBox.Location = New System.Drawing.Point(153, 112)
+        Me.CfgDevStatComboBox.Location = New System.Drawing.Point(151, 105)
         Me.CfgDevStatComboBox.Name = "CfgDevStatComboBox"
         Me.CfgDevStatComboBox.Size = New System.Drawing.Size(160, 21)
         Me.CfgDevStatComboBox.TabIndex = 89
@@ -811,6 +812,7 @@ Partial Class ReportConfigForm
         'GroupBox2
         '
         Me.GroupBox2.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.GroupBox2.Controls.Add(Me.CfgOrderNoChkBox)
         Me.GroupBox2.Controls.Add(Me.CfgProdNameChkBox)
         Me.GroupBox2.Controls.Add(Me.CfgProdNameComboBox)
         Me.GroupBox2.Controls.Add(Me.CfgDevStatComboBox)
@@ -825,7 +827,7 @@ Partial Class ReportConfigForm
         Me.GroupBox2.Controls.Add(Me.CfgPurDateFromDatePick)
         Me.GroupBox2.Location = New System.Drawing.Point(660, 44)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(613, 154)
+        Me.GroupBox2.Size = New System.Drawing.Size(613, 174)
         Me.GroupBox2.TabIndex = 97
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Product Information"
@@ -849,6 +851,17 @@ Partial Class ReportConfigForm
         Me.GroupBox3.TabIndex = 98
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Menu Information"
+        '
+        'CfgOrderNoChkBox
+        '
+        Me.CfgOrderNoChkBox.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.CfgOrderNoChkBox.AutoSize = True
+        Me.CfgOrderNoChkBox.Location = New System.Drawing.Point(17, 130)
+        Me.CfgOrderNoChkBox.Name = "CfgOrderNoChkBox"
+        Me.CfgOrderNoChkBox.Size = New System.Drawing.Size(92, 17)
+        Me.CfgOrderNoChkBox.TabIndex = 90
+        Me.CfgOrderNoChkBox.Text = "Order Number"
+        Me.CfgOrderNoChkBox.UseVisualStyleBackColor = True
         '
         'ReportConfigForm
         '
@@ -943,4 +956,5 @@ Partial Class ReportConfigForm
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
     Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
+    Friend WithEvents CfgOrderNoChkBox As System.Windows.Forms.CheckBox
 End Class

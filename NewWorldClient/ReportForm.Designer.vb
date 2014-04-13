@@ -32,8 +32,11 @@ Partial Class ReportForm
         Me.ReportPrintDialog = New System.Windows.Forms.PrintDialog()
         Me.ReportSaveFileDialog = New System.Windows.Forms.SaveFileDialog()
         Me.ReportFormCancelBtn = New System.Windows.Forms.Button()
+        Me.ReportStatusStrip = New System.Windows.Forms.StatusStrip()
+        Me.ReportToolStripStatusLabel = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ReportMenuStrip.SuspendLayout()
         CType(Me.ReportDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ReportStatusStrip.SuspendLayout()
         Me.SuspendLayout()
         '
         'ReportMenuStrip
@@ -99,6 +102,7 @@ Partial Class ReportForm
         '
         'ReportFormCancelBtn
         '
+        Me.ReportFormCancelBtn.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.ReportFormCancelBtn.Location = New System.Drawing.Point(865, 543)
         Me.ReportFormCancelBtn.Name = "ReportFormCancelBtn"
         Me.ReportFormCancelBtn.Size = New System.Drawing.Size(75, 23)
@@ -106,12 +110,27 @@ Partial Class ReportForm
         Me.ReportFormCancelBtn.Text = "Cancel"
         Me.ReportFormCancelBtn.UseVisualStyleBackColor = True
         '
+        'ReportStatusStrip
+        '
+        Me.ReportStatusStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReportToolStripStatusLabel})
+        Me.ReportStatusStrip.Location = New System.Drawing.Point(0, 556)
+        Me.ReportStatusStrip.Name = "ReportStatusStrip"
+        Me.ReportStatusStrip.Size = New System.Drawing.Size(964, 22)
+        Me.ReportStatusStrip.TabIndex = 4
+        Me.ReportStatusStrip.Text = "test test test"
+        '
+        'ReportToolStripStatusLabel
+        '
+        Me.ReportToolStripStatusLabel.Name = "ReportToolStripStatusLabel"
+        Me.ReportToolStripStatusLabel.Size = New System.Drawing.Size(0, 17)
+        '
         'ReportForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.ReportFormCancelBtn
         Me.ClientSize = New System.Drawing.Size(964, 578)
+        Me.Controls.Add(Me.ReportStatusStrip)
         Me.Controls.Add(Me.ReportDataGridView)
         Me.Controls.Add(Me.ReportFormCancelBtn)
         Me.Controls.Add(Me.ReportMenuStrip)
@@ -123,6 +142,8 @@ Partial Class ReportForm
         Me.ReportMenuStrip.ResumeLayout(False)
         Me.ReportMenuStrip.PerformLayout()
         CType(Me.ReportDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ReportStatusStrip.ResumeLayout(False)
+        Me.ReportStatusStrip.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -137,4 +158,6 @@ Partial Class ReportForm
     Friend WithEvents SaveQueryToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ExitToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ReportFormCancelBtn As System.Windows.Forms.Button
+    Friend WithEvents ReportStatusStrip As System.Windows.Forms.StatusStrip
+    Friend WithEvents ReportToolStripStatusLabel As System.Windows.Forms.ToolStripStatusLabel
 End Class
