@@ -368,6 +368,12 @@
     <Compile Include="WhSummary.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="WhSumQuery.Designer.vb">
+      <DependentUpon>WhSumQuery.vb</DependentUpon>
+    </Compile>
+    <Compile Include="WhSumQuery.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="WhViewForm.Designer.vb">
       <DependentUpon>WhViewForm.vb</DependentUpon>
     </Compile>
@@ -495,6 +501,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="WhSummary.resx">
       <DependentUpon>WhSummary.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WhSumQuery.resx">
+      <DependentUpon>WhSumQuery.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WhViewForm.resx">
       <DependentUpon>WhViewForm.vb</DependentUpon>

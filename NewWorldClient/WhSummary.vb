@@ -4,15 +4,18 @@ Imports System.Windows.Forms.SaveFileDialog
 Public Class WhSummary
 
     Private Sub ExitToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles ExitToolStripMenuItem.Click
+        Me.ReportSaveFileDialog.FileName = strQueryDate
         Me.ReportSaveFileDialog.ShowDialog()
     End Sub
 
     Private Sub ExitToolStripMenuItem1_Click(sender As System.Object, e As System.EventArgs) Handles ExitToolStripMenuItem1.Click
+        strQueryDate = Nothing
         Me.Dispose()
 
     End Sub
 
     Private Sub WhSummary_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
+        strQueryDate = Nothing
         Me.Dispose()
 
     End Sub

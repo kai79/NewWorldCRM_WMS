@@ -938,24 +938,9 @@
 
     Private Sub WhOverviewDetailBtn_Click(sender As System.Object, e As System.EventArgs) Handles WhOverviewDetailBtn.Click
 
-        Dim myConn As New SqlClient.SqlConnection(strConnectionString)
-        Dim myTable As New DataTable()
-        Dim myCmd As New SqlClient.SqlCommand()
-        myCmd.Connection = myConn
-        Dim myQuery As String = "select Distinct T1.WhItemProdID as 'Ref ID', T1.WhItemProdCat as 'Product Category', T1.WhItemProdName as 'Product Name', T2.SumIn as 'In', T3.SumOut as 'Out', (T2.SumIn - T3.SumOut) as 'Balance' from WhItemTbl as T1, (select SUM(WhItemQty) as 'SumIn', WhItemProdID from WhItemTbl Where WhItemTranType = 'In' group by WhItemProdID) as T2, (select SUM(WhItemQty) as 'SumOut', WhItemProdID from WhItemTbl Where WhItemTranType = 'Out' group by WhItemProdID) as T3, WhProdTbl as T4 WHERE T1.WhItemProdID = T2.WhItemProdID And T1.WhItemProdID = T3.WhItemProdID And T1.WhItemProdID = T4.WhProdID And T4.WhProdEnable = 1 union all select Distinct T1.WhItemProdID as 'Ref ID', T1.WhItemProdCat as 'Product Category', T1.WhItemProdName as 'Product Name', T2.SumIn as 'In', T3.SumOut as 'Out', (T2.SumIn - T3.SumOut) as 'Balance' from WhItemTbl as T1, (select 'SumIn'=0, WhProdID from WhProdTbl where WhProdID not in (select WhItemProdID from WhItemTbl where WhItemTranType = 'In') group by WhProdID) as T2, (select SUM(WhItemQty) as 'SumOut', WhItemProdID from WhItemTbl Where WhItemTranType = 'Out' group by WhItemProdID) as T3, WhProdTbl as T4 WHERE T1.WhItemProdID = T2.WhProdID And T1.WhItemProdID = T3.WhItemProdID And T1.WhItemProdID = T4.WhProdID And T4.WhProdEnable = 1 union all select Distinct T1.WhItemProdID as 'Ref ID', T1.WhItemProdCat as 'Product Category', T1.WhItemProdName as 'Product Name', T2.SumIn as 'In', T3.SumOut as 'Out', (T2.SumIn - T3.SumOut) as 'Balance' from WhItemTbl as T1, (select SUM(WhItemQty) as 'SumIn', WhItemProdID from WhItemTbl Where WhItemTranType = 'In' group by WhItemProdID) as T2, (select 'SumOut'=0, WhProdID from WhProdTbl where WhProdID not in (select WhItemProdID from WhItemTbl where WhItemTranType = 'Out') group by WhProdID) as T3, WhProdTbl as T4 WHERE T1.WhItemProdID = T2.WhItemProdID And T1.WhItemProdID = T3.WhProdID And T1.WhItemProdID = T4.WhProdID And T4.WhProdEnable = 1 union all select Distinct T1.WhProdID as 'Ref ID', T1.WhProdCat as 'Product Category', T1.WhProdName as 'Product Name', T2.SumIn as 'In', T3.SumOut as 'Out', (T2.SumIn - T3.SumOut) as 'Balance' from WhProdTbl as T1, (select 'SumIn'=0, WhProdID from WhProdTbl where WhProdID not in (select WhItemProdID from WhItemTbl where WhItemTranType = 'In') group by WhProdID) as T2, (select 'SumOut'=0, WhProdID from WhProdTbl where WhProdID not in (select WhItemProdID from WhItemTbl where WhItemTranType = 'Out') group by WhProdID) as T3 WHERE T1.WhProdID = T2.WhProdID And T1.WhProdID = T3.WhProdID And T1.WhProdEnable = 1 ORDER BY T1.WhItemProdCat, T1.WhItemProdName"
-        myCmd.CommandText = myQuery
+        Dim NewWhSumQuery As New WhSumQuery
+        NewWhSumQuery.ShowDialog()
 
-        Try
-            Dim myAdapter As New SqlClient.SqlDataAdapter(myCmd)
-            myAdapter.Fill(myTable)
-
-        Catch ex As Exception
-
-        End Try
-        Dim NewWhSummary As New WhSummary
-        NewWhSummary.WhSumDataGridView.DataSource = myTable
-        NewWhSummary.WhSumDataGridView.AlternatingRowsDefaultCellStyle.BackColor = Color.LightGray
-        NewWhSummary.Show()
     End Sub
 
     Private Sub WhQueryApproveBtn_Click(sender As System.Object, e As System.EventArgs) Handles WhQueryApproveBtn.Click

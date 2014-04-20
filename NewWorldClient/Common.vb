@@ -198,6 +198,9 @@
     Public strWhCusLockUser As String
     Public boolWhCusLock As Boolean
 
+    'Warehouse Monthly Query
+    Public strQueryDate As String
+
     'Warehouse Viewer
     Public strWhViewTranType As String
     Public strWhViewCusType As String
